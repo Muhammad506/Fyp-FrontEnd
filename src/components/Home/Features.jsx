@@ -93,7 +93,10 @@ const Features = () => {
   }, []);
 
   return (
-    <main className="relative bg-[url('bgFeatures.jpg')] bg-cover px-4 md:px-10 lg:px-20 py-10 ">
+    <main
+      className="relative  bg-cover px-4 md:px-10 lg:px-20 py-10 "
+      style={{ backgroundImage: `url(/bgFeatures.jpg)` }}
+    >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-[-1]"></div>
 
@@ -104,7 +107,7 @@ const Features = () => {
           isVisible ? "animate-zoomIn opacity-100" : "opacity-0"
         }`}
       >
-        <div className="space-y-4 py-14 w-full text-white px-4 lg:px-0 " >
+        <div className="space-y-4 py-14 w-full text-white px-4 lg:px-0 ">
           <h className=" p-3 lg:p-0 text-3xl md:text-4xl xl:text-5xl font-bold ">
             Features
           </h>
