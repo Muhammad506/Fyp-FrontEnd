@@ -14,11 +14,13 @@ const NavBar = () => {
     <header className="bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] fixed top-0 left-0 w-full z-50">
       {/* Navbar for Large Screens */}
       <nav className="hidden lg:flex justify-between items-center px-8 border-b border-gray-700 text-gray-300">
-        <img
-          src="NavBar.png"
-          alt="Navbar"
-          className="size-20 transform hover:scale-110 transition duration-300"
-        />
+        <Link to="/">
+          <img
+            src="NavBar.png"
+            alt="Navbar"
+            className="size-20 transform hover:scale-110  transition duration-1000"
+          />
+        </Link>
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center">
           <Link
             to="/"
@@ -92,12 +94,12 @@ const NavBar = () => {
           ) : (
             <>
               <Link to="/register">
-                <button className="bg-yellow-500 px-5 py-2 text-black font-semibold rounded-full hover:scale-105 transition-transform">
+                <button className="bg-yellow-500 px-5 py-2 text-black font-semibold rounded-full hover:scale-110 duration-700  transition-transform">
                   Register
                 </button>
               </Link>
               <Link to="/login">
-                <button className="bg-yellow-500 px-5 py-2 text-black font-semibold rounded-full hover:scale-105 transition-transform">
+                <button className="bg-yellow-500 px-5 py-2 text-black font-semibold rounded-full hover:scale-110 duration-700 transition-transform">
                   Login
                 </button>
               </Link>
@@ -108,7 +110,9 @@ const NavBar = () => {
 
       {/* Hamburger Menu for Small/Medium Screens */}
       <div className="lg:hidden flex justify-between items-center px-5 py-2">
-        <img src="NavBar.png" alt="Navbar" className="h-12 w-12" />
+        <Link to="/">
+          <img src="NavBar.png" alt="Navbar" className="h-12 w-12" />
+        </Link>
         <button onClick={toggleMenu} className="z-50 focus:outline-none">
           <div
             className={`w-6 h-0.5 bg-white transition-all duration-300 ${

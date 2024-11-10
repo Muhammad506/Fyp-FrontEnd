@@ -26,12 +26,11 @@ const Login = () => {
 
   return (
     <main className="h-screen flex flex-col md:flex-row text-white overflow-visible md:overflow-hidden">
-      <a
-        className="absolute z-50 left-4 top-4 opacity-90 hover:opacity-100 text-white border border-white rounded-3xl px-4 py-1 bg-black bg-opacity-50 shadow-lg"
-        href="/"
-      >
-        Back
-      </a>
+      <Link to="/">
+        <div className="absolute z-50 left-4 top-4 opacity-90 hover:opacity-100 hover:scale-125 duration-1000 text-white border border-white rounded-3xl px-4 py-1 bg-black bg-opacity-50 shadow-lg">
+          Back
+        </div>
+      </Link>
 
       <div className="w-full md:w-2/3 hidden md:block">
         <img
@@ -104,7 +103,7 @@ const Login = () => {
             </a>
           </div>
 
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400 text-black font-bold py-2 px-4 rounded-full w-full shadow-lg hover:scale-105 transform transition duration-300">
+          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400 text-black font-bold py-2 px-4 rounded-full w-full shadow-lg hover:scale-110 transform transition duration-700">
             Login
           </button>
 

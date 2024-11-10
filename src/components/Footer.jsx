@@ -10,17 +10,20 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] text-gray-300 border-t border-gray-700">
       <div className="max-w-7xl mx-auto py-10 px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
         {/* Company Info Section */}
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="relative flex flex-col items-center">
-            <img
-              className="size-24 mx-auto mb-4 transform transition-transform duration-300 hover:scale-110"
-              src="NavBar.png"
-              alt="Navbar"
-            />
+            <Link to="/">
+              <img
+                className="size-24 mx-auto mb-4 transform transition-transform duration-1000 hover:scale-110"
+                src="NavBar.png"
+                alt="Navbar"
+              />
+            </Link>
             <p className="text-gray-400 text-sm  max-w-xs">
-              Solar Intelli Solutions provides top-notch solar energy solutions, ensuring efficient and sustainable energy management for a greener future.
+              Solar Intelli Solutions provides top-notch solar energy solutions,
+              ensuring efficient and sustainable energy management for a greener
+              future.
             </p>
           </div>
         </div>
@@ -30,38 +33,64 @@ const Footer = () => {
           <h2 className="text-lg font-semibold text-yellow-400">Quick Links</h2>
           <Link
             to="/"
-            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${isActive("/") ? "text-yellow-400" : ""}`}
+            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+              isActive("/") ? "text-yellow-400" : ""
+            }`}
           >
             Home
-            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${isActive("/") ? "scale-x-100" : "scale-x-0"} group-hover:scale-x-100 transition-transform duration-300 origin-left`}></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${
+                isActive("/") ? "scale-x-100" : "scale-x-0"
+              } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+            ></span>
           </Link>
           <Link
             to="/about-us"
-            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${isActive("/about-us") ? "text-yellow-400" : ""}`}
+            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+              isActive("/about-us") ? "text-yellow-400" : ""
+            }`}
           >
             About Us
-            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${isActive("/about-us") ? "scale-x-100" : "scale-x-0"} group-hover:scale-x-100 transition-transform duration-300 origin-left`}></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${
+                isActive("/about-us") ? "scale-x-100" : "scale-x-0"
+              } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+            ></span>
           </Link>
           <Link
             to="/features"
-            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${isActive("/features") ? "text-yellow-400" : ""}`}
+            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+              isActive("/features") ? "text-yellow-400" : ""
+            }`}
           >
             Features
-            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${isActive("/features") ? "scale-x-100" : "scale-x-0"} group-hover:scale-x-100 transition-transform duration-300 origin-left`}></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${
+                isActive("/features") ? "scale-x-100" : "scale-x-0"
+              } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+            ></span>
           </Link>
           <Link
             to="/contact-us"
-            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${isActive("/contact-us") ? "text-yellow-400" : ""}`}
+            className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+              isActive("/contact-us") ? "text-yellow-400" : ""
+            }`}
           >
             Contact Us
-            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${isActive("/contact-us") ? "scale-x-100" : "scale-x-0"} group-hover:scale-x-100 transition-transform duration-300 origin-left`}></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${
+                isActive("/contact-us") ? "scale-x-100" : "scale-x-0"
+              } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+            ></span>
           </Link>
         </div>
 
         {/* Contact & Social Media Section */}
         <div className="space-y-4 text-center md:text-left">
           <h2 className="text-lg font-semibold text-yellow-400">Contact Us</h2>
-          <p className="text-sm text-gray-500">123 Solar Street, Energy City, Green State, 45678</p>
+          <p className="text-sm text-gray-500">
+            123 Solar Street, Energy City, Green State, 45678
+          </p>
           <p className="text-sm text-gray-500">Email: info@solarintelli.com</p>
           <p className="text-sm text-gray-500">Phone: +123 456 7890</p>
           <div className="flex justify-center md:justify-start gap-6 pt-4">

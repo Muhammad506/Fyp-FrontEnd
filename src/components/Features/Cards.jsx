@@ -9,7 +9,7 @@ const Cards = () => {
   });
 
   return (
-    <div className="p-4 bg-gray-50">
+    <div className="p-4 bg-gradient-to-tr from-blue-50 via-white to-blue-50 py-16">
       <div
         ref={cardsRef}
         className={`grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-xl::grid-cols-4 transition-opacity duration-700 ${
