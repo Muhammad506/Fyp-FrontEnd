@@ -102,10 +102,19 @@ const Login = () => {
               Forgot password?
             </a>
           </div>
-
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400 text-black font-bold py-2 px-4 rounded-full w-full shadow-lg hover:scale-110 transform transition duration-700">
-            Login
+          <button
+            type="submit"
+            className="services w-full gap-2 relative flex justify-center items-center overflow-hidden rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4  border border-gray-300 bg-[#021430]  font-semibold z-10 snap-center text-white riunded-md  group"
+          >
+            <span className="relative z-10">Login</span>
+            <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-yellow-400 transition-all duration-600 group-hover:h-full"></span>
+            <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-yellow-400 transition-all duration-700 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-yellow-400 transition-all duration-700 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-yellow-400 transition-all duration-700 group-hover:h-full"></span>
           </button>
+          {/* <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400 text-black font-bold py-2 px-4 rounded-full w-full shadow-lg hover:scale-110 transform transition duration-700">
+            Login
+          </button> */}
 
           <p className="mt-4 text-center">
             Don’t have an account?{" "}

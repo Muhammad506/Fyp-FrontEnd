@@ -33,11 +33,13 @@ const RegisterCTA = () => {
         </p>
         <div className="flex w-full justify-start">
           <Link to="/register">
-            <button className="relative bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] text-white transition duration-700 ease-in-out rounded-full text-base px-8 py-4 font-semibold shadow-md transform hover:scale-105 overflow-hidden">
-              <span className="absolute inset-0 bg-blue-800 opacity-0 group-hover:opacity-30 transition duration-300"></span>
-              <span className="relative flex gap-3">
-                Register <MdCallMade className="size-5  " />
-              </span>
+            <button className="services gap-2 relative flex justify-between items-center overflow-hidden  rounded-full lg:rounded-sm  px-6 py-3 lg:px-3 lg:py-3  border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group">
+              <span className="relative z-10">Register</span>
+              <MdCallMade className="relative z-10" />
+              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
+              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
+              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
+              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
             </button>
           </Link>
         </div>

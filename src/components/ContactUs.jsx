@@ -30,7 +30,7 @@ const ContactUs = () => {
             Get In Touch With Us
           </h2>
           <p className="mb-6 text-left text-lg">
-            Contact us about anything related to our company or services. We'll
+            Contact us about anything related to our company or services. We`ll
             do our best to get back to you as soon as possible.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -47,7 +47,7 @@ const ContactUs = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 bg-gray-100 text-gray-800  rounded-lg lg:rounded-none  shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 placeholder="Your name"
                 required
               />
@@ -65,7 +65,7 @@ const ContactUs = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg lg:rounded-none   shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 placeholder="you@example.com"
                 required
               />
@@ -73,7 +73,7 @@ const ContactUs = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-semibold mb-2"
+                className="block text-sm font-semibold mb-2 "
               >
                 Message
               </label>
@@ -82,7 +82,7 @@ const ContactUs = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 resize-none bg-gray-100 text-gray-800 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 resize-none bg-gray-100 rounded-lg lg:rounded-none   text-gray-800  shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 rows="3"
                 placeholder="Your message here"
                 required
@@ -90,10 +90,20 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
+              className="services w-full gap-2 relative flex justify-center items-center overflow-hidden rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4 border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group"
+            >
+              <span className="relative z-10">Send Message</span>
+              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
+              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
+              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
+              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
+            </button>
+            {/* <button
+              type="submit"
               className="w-full py-3 px-4 bg-gradient-to-br from-[#021430] via-[#172963] to-[#021430] text-white font-semibold rounded-lg shadow-lg focus:outline-none focus:ring-2 hover:scale-110 duration-700 ease-in-out transform focus:ring-yellow-400"
             >
               Send Message
-            </button>
+            </button> */}
           </form>
         </div>
       </div>
