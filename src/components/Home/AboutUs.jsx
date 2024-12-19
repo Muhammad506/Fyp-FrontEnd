@@ -1,12 +1,10 @@
 import { useInView } from "react-intersection-observer";
-import { MdCallMade } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AboutUS = () => {
-  // Use Intersection Observer to detect if the component is in view
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
-    triggerOnce: true, // Animate only once
-    threshold: 0.2, // Trigger when 20% of the component is visible
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   const { ref: rightContentRef, inView: rightContentInView } = useInView({
@@ -15,17 +13,42 @@ const AboutUS = () => {
   });
 
   return (
-    <main className=" container bg-[#F7F7F7] pt-20 flex flex-col gap-8 items-center px-4 md:px-10 lg:px-20 mx-auto mt-8 space-y-8  lg:mt-16  lg:flex-row lg:items-start lg:space-y-0">
+    <main className="container bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto mt-8 md:px-10 lg:px-20 lg:mt-16 lg:flex-row lg:items-start">
+      {/* Image Section */}
       <div
-        ref={leftContentRef}
-        className={`lg:w-1/2 space-y-6 lg:space-y-8 lg:pr-10 ${
-          leftContentInView ? "animate-slideInLeft" : "opacity-0"
+        ref={rightContentRef}
+        className={`lg:w-1/2 flex justify-center items-center self-center  transition-transform duration-1000 ${
+          rightContentInView
+            ? "animate-slideInLeft"
+            : "opacity-0 translate-x-[-50px]"
         }`}
       >
-        <h className="text-3xl md:text-4xl xl:text-5xl  font-bold text-gray-800  ">
-          About Us
-        </h>
-        <p className="max-w-full text-base text-gray-700 text-justify sm:text-lg lg:text-xl lg:max-w-2xl">
+        <img
+          className="w-full max-h-screen rounded-lg  md:w-3/4 lg:w-11/12 transform hover:shadow-[#5B9B37]/30 hover:shadow-lg "
+          src="about.jpg"
+          alt="About Us"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Content Section */}
+      <div
+        ref={leftContentRef}
+        className={`lg:w-1/2 space-y-8 transition-all self-center duration-1000 ${
+          leftContentInView
+            ? "animate-slideInRight"
+            : "opacity-0 translate-x-[50px]"
+        }`}
+      >
+        <div className="space-y-4">
+          <h1 className="text-lg font-semibold tracking-widest text-[#5B9B37] drop-shadow-sm md:text-xl lg:text-2xl font-funnel">
+            About Us
+          </h1>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider md:tracking-widest text-gray-900 drop-shadow-md font-funnel">
+            Get Connected for Enhanced Vision
+          </h2>
+        </div>
+        <p className="text-gray-700 text-justify text-base leading-relaxed sm:text-lg lg:text-xl lg:max-w-2xl">
           At Solar Intelli Solutions, we specialize in innovative solar energy
           management systems designed to optimize energy efficiency and usage.
           Our platform provides a user-friendly interface to monitor and control
@@ -33,30 +56,14 @@ const AboutUS = () => {
           practices. With cutting-edge technologies and AI-driven insights, we
           are revolutionizing how solar energy is managed.
         </p>
-        <div className="flex justify-start">
+        <div>
           <Link to="/about-us">
-            <button className="services gap-2 relative flex justify-between items-center overflow-hidden rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4  border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group">
-              <span className="relative z-10">Learn About Solar Energy</span>
-              <MdCallMade className="relative z-10" />
-              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
-              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
+            <button className="relative px-6 py-3 text-white hover:scale-95 duration-700 font-semibold bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full shadow-lg  transition-transform  ">
+              Learn More
+              <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
             </button>
           </Link>
         </div>
-      </div>
-      <div
-        ref={rightContentRef}
-        className={`lg:w-1/2 items-center flex justify-center self-center ${
-          rightContentInView ? "animate-slideInRight" : "opacity-0"
-        }`}
-      >
-        <img
-          className="w-full md:w-3/4 items-center flex justify-center self-center lg:w-11/12 max-h-screen  rounded-lg shadow-xl transform  hover:scale-110 transition duration-1000"
-          src="AboutUs.jpg"
-          alt="About Us"
-        />
       </div>
     </main>
   );

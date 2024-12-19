@@ -27,6 +27,10 @@ export default {
         fadeIn: "fadeIn 1s ease-out",
         zoomIn: "zoomIn 0.8s ease-out forwards",
       },
+      fontFamily: {
+        messiri: ["El Messiri", "sans-serif"],
+        funnel: ["Funnel Display", "sans-serif"],
+      },
     },
   },
   plugins: [],

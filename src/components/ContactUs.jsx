@@ -22,7 +22,7 @@ const ContactUs = () => {
   };
 
   return (
-    <main className="flex flex-col md:flex-row min-h-screen mt-20">
+    <main className="flex flex-col md:flex-row min-h-screen mt-20 animate-zoomIn">
       {/* Left side: Form content */}
       <div className="flex items-center justify-center w-full lg:w-1/2 p-8 bg-white text-gray-800">
         <div className="w-full max-w-lg">

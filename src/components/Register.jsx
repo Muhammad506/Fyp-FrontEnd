@@ -3,6 +3,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdEmail } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Register = () => {
     }));
   };
 
+  //handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,15 +33,29 @@ const Register = () => {
     }
 
     try {
-      navigate("/login");
+      const { data } = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+          confirmation: formData.confirmPassword,
+        }
+      );
+
+      // Handle success response
+      alert(data.message); // Show a success message
+      navigate("/login"); // Redirect to login page
     } catch (err) {
-      setError("Registration failed. Please try again.");
+      setError(
+        err.response?.data?.error || "Registration failed. Please try again."
+      );
       console.error(err);
     }
   };
 
   return (
-    <main className="min-h-screen flex flex-col md:flex-row text-white overflow-visible md:overflow-hidden">
+    <main className="min-h-screen flex flex-col md:flex-row text-white overflow-visible md:overflow-hidden animate-fadeIn">
       <Link to="/">
         <div className="absolute z-50 left-4 hover:scale-125 duration-1000 ease-in-out transform top-4 opacity-90 hover:opacity-100 text-white border border-white rounded-3xl px-4 py-1 bg-black bg-opacity-50 shadow-lg">
           Back
@@ -56,10 +72,10 @@ const Register = () => {
 
       <div className="bg-[#0F172A] w-full md:w-2/5 flex flex-col items-center p-6 justify-center shadow-xl">
         <img src="NavBar.png" alt="navbar" className="w-24 mb-4" />
-        <h1 className="font-extrabold text-4xl text-center mb-3 text-yellow-400">
+        <h1 className="font-bold text-3xl md:text-4xl xl:text-5xl text-center mb-3 text-yellow-400">
           Register
         </h1>
-        <p className="text-gray-300 mb-3 px-4 text-center text-lg">
+        <p className="text-gray-300 mb-6 px-2 text-center ">
           Start generating your thoughts with Solar Intelli Solutions.
         </p>
 

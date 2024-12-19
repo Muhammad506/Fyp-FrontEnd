@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { MdCallMade } from "react-icons/md";
+
 
 const Cta = () => {
   // Set up Intersection Observer hooks for the left and right content
@@ -15,52 +15,57 @@ const Cta = () => {
   });
 
   return (
-    <main className="bg-[#F7F7F7]">
-      <div className="container mx-auto  gap-6 mt-8 px-4 md:px-10 lg:px-20 lg:mt-16 lg:py-16 flex flex-col-reverse lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0">
-        {/* Left Content (Image) */}
-        <div
-          ref={leftContentRef}
-          className={`lg:w-1/2 my-4 lg:my-0 flex self-center ${
-            leftContentInView ? "animate-slideInLeft" : "opacity-0"
-          }`}
-        >
-          <img
-            className="w-full lg:w-11/12 max-h-screen   transform  hover:scale-110 transition duration-1000"
-            src="CTA.jpg"
-            alt="CTA"
-          />
+    <main className="container bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto mt-8 md:px-10 lg:px-20 lg:mt-16 lg:flex-row lg:items-start"
+    
+    >
+      {/* Left Content (Text & Button) */}
+      <div
+        ref={rightContentRef}
+        className={`lg:w-1/2 space-y-8 transition-all self-center duration-1000 ${
+          rightContentInView
+            ? "animate-slideInLeft"
+            : "opacity-0 translate-x-[50px]"
+        }`}
+      >
+        <div className="space-y-4">
+          <h1 className="text-lg font-semibold tracking-widest text-[#5B9B37] drop-shadow-sm md:text-xl lg:text-2xl font-funnel">
+            Take the Next Step
+          </h1>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-gray-900 drop-shadow-md font-funnel">
+            Power that Doesn't Cost the Earth
+          </h2>
         </div>
-
-        {/* Right Content (Text & Button) */}
-        <div
-          ref={rightContentRef}
-          className={`lg:w-1/2 space-y-6 lg:space-y-8 flex flex-col self-center lg:pl-8 ${
-            rightContentInView ? "animate-slideInRight" : "opacity-0"
-          }`}
-        >
-          <h className="text-3xl md:text-4xl xl:text-5xl font-bold text-gray-800">
-            Power that Does not Cost the Earth
-          </h>
-          <p className="text-base sm:text-lg text-justify lg:text-xl max-w-full lg:max-w-2xl text-gray-700">
-            If you have any questions or need expert advice about our services,
-            don’t hesitate to reach out. Give us a call at 07745593882 to speak
-            directly with our team and receive personalized assistance.
-            Alternatively, if you would prefer a callback at a convenient time,
-            simply hit the button below and we’ll be in touch shortly!
-          </p>
-          <div className="flex justify-start ">
-            <Link to="/contact-us">
-              <button className="services gap-2 relative flex justify-between items-center overflow-hidden rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4 border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group">
-                <span className="relative z-10">Contact Us Today</span>
-                <MdCallMade className="relative z-10" />
-                <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
-                <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-                <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-                <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
-              </button>
-            </Link>
-          </div>
+        <p className="text-gray-700 text-justify text-base leading-relaxed sm:text-lg lg:text-xl lg:max-w-2xl">
+          If you have any questions or need expert advice about our services,
+          don’t hesitate to reach out. Give us a call at 07745593882 to speak
+          directly with our team and receive personalized assistance.
+          Alternatively, if you would prefer a callback at a convenient time,
+          simply hit the button below and we’ll be in touch shortly!
+        </p>
+        <div>
+          <Link to="/contact-us">
+            <button className="relative px-6 py-3 text-white font-semibold bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full shadow-lg hover:scale-95 duration-700  transition-transform ">
+              Let's Connect
+              <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
+            </button>
+          </Link>
         </div>
+      </div>
+      {/* Right Content (Image) */}
+      <div
+        ref={leftContentRef}
+        className={`lg:w-1/2 flex justify-center items-center self-center transition-transform duration-1000 ${
+          leftContentInView
+            ? "animate-slideInRight"
+            : "opacity-0 translate-x-[-50px]"
+        }`}
+      >
+        <img
+          className="w-full max-h-screen  md:w-3/4 lg:w-11/12 transform   transition-all duration-700"
+          src="CTA.jpg"
+          alt="CTA"
+          loading="lazy"
+        />
       </div>
     </main>
   );

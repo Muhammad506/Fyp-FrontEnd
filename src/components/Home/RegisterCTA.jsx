@@ -32,7 +32,7 @@ const RegisterCTA = () => {
           for a greener future.
         </p>
         <div className="flex w-full justify-start">
-          <Link to="/register">
+          {/* <Link to="/register">
             <button className="services gap-2 relative flex justify-between items-center overflow-hidden  rounded-full lg:rounded-sm  px-6 py-3 lg:px-3 lg:py-3  border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group">
               <span className="relative z-10">Register</span>
               <MdCallMade className="relative z-10" />
@@ -40,6 +40,11 @@ const RegisterCTA = () => {
               <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
               <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
               <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
+            </button>
+          </Link> */}
+          <Link to="/register">
+            <button className="text-white px-5 py-3 bg-gradient-to-t from-[#1C204B] to-[#10172D] font-semibold rounded-full hover:scale-110 duration-700 transition-transform">
+              Register
             </button>
           </Link>
         </div>

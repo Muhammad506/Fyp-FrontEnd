@@ -1,4 +1,4 @@
-import { MdCallMade } from "react-icons/md";
+// import { MdCallMade } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
@@ -12,11 +12,11 @@ const LandingPage = () => {
           alt="LandingPage"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
       </div>
 
       {/* Content */}
-      <div className="px-4 md:px-10  lg:px-20 relative z-10 animate-slideInLeft flex flex-col items-start justify-center text-left space-y-6 sm:space-y-8 py-24 sm:py-40  sm:px-16 max-w-screen-lg mx-auto">
+      <div className="sm:space-y-8 py-24 sm:py-40  sm:px-16 px-4 md:px-10  lg:px-20 relative z-10 animate-slideInLeft flex flex-col items-start justify-center text-left space-y-6   max-w-screen-lg mx-auto">
         <h className=" text-3xl md:text-4xl xl:text-5xl  text-nowrap font-bold leading-tight drop-shadow-lg">
           Solar Intelli Solutions
         </h>
@@ -31,14 +31,19 @@ const LandingPage = () => {
           us seamless, enjoyable, and productive.
         </p>
         <div className="w-full sm:w-auto">
-          <Link to="/contact-us">
+          {/* <Link to="/contact-us">
             <button className="services gap-2 relative flex justify-between rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4  items-center overflow-hidden  border border-gray-300 bg-[#021430] font-semibold z-10 snap-center text-white  group">
-              <span className="relative z-10">Get In Touch With Us</span>
+              <span className="relative z-10">  Get In Touch With Us</span>
               <MdCallMade className="relative z-10" />
               <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-yellow-400 transition-all duration-700 group-hover:h-full"></span>
               <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-yellow-400 transition-all duration-700 group-hover:w-full"></span>
               <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-yellow-400 transition-all duration-700 group-hover:w-full"></span>
               <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-yellow-400 transition-all duration-700 group-hover:h-full"></span>
+            </button>
+          </Link> */}
+          <Link to="/contact-us">
+            <button className="bg-yellow-500 px-5 py-3 text-black font-semibold rounded-full hover:scale-110 duration-700 transition-transform">
+              Get In Touch With Us
             </button>
           </Link>
         </div>

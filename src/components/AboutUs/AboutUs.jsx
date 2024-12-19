@@ -6,6 +6,7 @@ import OurTeam from "./OurTeam";
 const AboutUs = () => {
   return (
     <div>
+    
       <CompanyOverview />
       <WhyChooseUs />
       {/* <OurServices /> */}

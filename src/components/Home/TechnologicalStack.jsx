@@ -1,17 +1,35 @@
 import Marquee from "react-fast-marquee";
+import "@fontsource/el-messiri";
 
 const TechnologicalStack = () => {
   return (
-    <main className="bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] max-h-screen flex justify-center items-center py-16">
-      <div className="flex flex-col gap-8 md:gap-12 justify-center items-center text-center w-full ">
-        <div className="px-4 gap-6 flex flex-col">
-          <h className="text-3xl md:text-4xl xl:text-5xl font-bold text-white drop-shadow-lg">
+    <main className="relative bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] h-full flex justify-center items-center py-16">
+      {/* left bottom shape */}
+      <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tr-full rounded-br-full absolute left-0 bottom-2 z-10 shadow-xl"></div>
+      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute bottom-6 left-8 md:bottom-12 md:left-24 shadow-xl z-10"></div>
+
+      {/* right bottom shape */}
+      <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tr-full rounded-br-full rotate-180 absolute right-0 bottom-2 z-10 shadow-xl"></div>
+      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute bottom-6 right-8 md:bottom-12 md:right-24 shadow-xl z-10"></div>
+
+      {/* right top shape */}
+      <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tl-full rounded-bl-full absolute right-0 top-3 z-10 shadow-xl"></div>
+      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute top-6 right-8 md:top-14 md:right-24 shadow-xl z-10"></div>
+
+      {/* left top shape */}
+      <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tl-full rotate-180 rounded-bl-full absolute left-0 top-3 z-10 shadow-xl"></div>
+      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute top-6 left-8 md:top-14 md:left-24 shadow-xl z-10"></div>
+
+      {/* content */}
+      <div className="flex flex-col gap-8 md:gap-12 justify-center items-center text-center w-full z-10 py-6 ">
+        <div className="px-2 md:px-4 gap-3 flex flex-col">
+          <h1 className="text-lg font-semibold tracking-widest text-black drop-shadow-sm md:text-xl lg:text-2xl font-funnel">
             Technological Stack
-          </h>
-          <p className="text-base md:text-lg xl:text-xl md:max-w-lg text-black mb-3 drop-shadow-md">
-            Our solution uses cutting-edge technologies to provide a robust and
-            scalable platform.
-          </p>
+          </h1>
+
+          <h2 className=" text-xl md:text-3xl xl:text-4xl tracking-widest w-full md:w-[90%] lg:w-[70%] xl:w-[60%] self-center flex font-funnel font-semibold text-white drop-shadow-md">
+            Our solution uses advanced technologies for a scalable platform
+          </h2>
         </div>
 
         <div className="relative w-full flex flex-col items-center">

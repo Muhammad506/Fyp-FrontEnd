@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  //handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -20,12 +21,13 @@ const Login = () => {
       localStorage.setItem("token", data.token); // Save token to localStorage
       navigate("/dashboard"); // Redirect after login
     } catch (error) {
-      alert(error.response.data.error || "Login failed");
+      alert(error.response?.data?.error || "Login failed");
     }
   };
 
   return (
-    <main className="h-screen flex flex-col md:flex-row text-white overflow-visible md:overflow-hidden">
+    
+    <main className="min-h-screen flex flex-col md:flex-row text-white overflow-visible md:overflow-hidden animate-fadeIn ">
       <Link to="/">
         <div className="absolute z-50 left-4 top-4 opacity-90 hover:opacity-100 hover:scale-125 duration-1000 text-white border border-white rounded-3xl px-4 py-1 bg-black bg-opacity-50 shadow-lg">
           Back
@@ -42,10 +44,10 @@ const Login = () => {
 
       <div className="bg-[#0F172A] w-full md:w-2/5 flex flex-col items-center p-6 justify-center shadow-xl">
         <img src="NavBar.png" alt="navbar" className="w-24 mb-4" />
-        <h1 className="font-extrabold text-4xl text-center mb-3 text-yellow-400">
+        <h1 className="font-bold text-3xl md:text-4xl xl:text-5xl  text-center mb-3 text-yellow-400">
           Login
         </h1>
-        <p className="text-gray-300 mb-3 px-4 text-center text-lg">
+        <p className="text-gray-300 mb-6 px-2  text-center ">
           Start generating your thoughts with Solar Intelli Solutions.
         </p>
 

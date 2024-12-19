@@ -1,11 +1,27 @@
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react"; // Import state and effect hooks
 
 const Footer = () => {
   const location = useLocation();
 
+  // Simulating login status (replace this with actual login logic)
+  const [loggedIn, setLoggedIn] = useState(false);
+
   // Function to check if the link is active
   const isActive = (path) => location.pathname === path;
+
+  useEffect(() => {
+    // Example: Here, you can simulate checking if the user is logged in
+    // For example, check for a token or logged-in user
+    const checkLoginStatus = () => {
+      // Simulated check: if a token exists in localStorage, the user is logged in
+      const token = localStorage.getItem("token");
+      setLoggedIn(!!token); // Set loggedIn to true if token exists
+    };
+
+    checkLoginStatus();
+  }, []);
 
   return (
     <footer className="bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] text-gray-300 border-t border-gray-700">
@@ -20,7 +36,7 @@ const Footer = () => {
                 alt="Navbar"
               />
             </Link>
-            <p className="text-gray-400 text-sm  max-w-xs">
+            <p className="text-gray-400 text-sm max-w-xs">
               Solar Intelli Solutions provides top-notch solar energy solutions,
               ensuring efficient and sustainable energy management for a greener
               future.
@@ -83,6 +99,21 @@ const Footer = () => {
               } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
             ></span>
           </Link>
+          {loggedIn && (
+            <Link
+              to="/dashboard"
+              className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+                isActive("/dashboard") ? "text-yellow-400" : ""
+              }`}
+            >
+              Dashboard
+              <span
+                className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 transform ${
+                  isActive("/dashboard") ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+              ></span>
+            </Link>
+          )}
         </div>
 
         {/* Contact & Social Media Section */}

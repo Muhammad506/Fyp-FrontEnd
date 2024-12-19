@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/el-messiri": "^5.1.0",
     "@react-icons/all-files": "^4.1.0",
     "@react-three/fiber": "^8.17.10",
     "axios": "^1.7.7",
@@ -20,7 +21,7 @@
     "react-icons": "^5.3.0",
     "react-intersection-observer": "^9.13.0",
     "react-router-dom": "^6.26.1",
-    "swiper": "^11.1.10"
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

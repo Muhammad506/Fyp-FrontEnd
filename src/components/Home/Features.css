@@ -1,0 +1,27 @@
+/* Swiper navigation arrows position adjustment */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #5b9b37; /* Match the theme color */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-prev {
+    left: -10px; /* Adjusted for better visibility */
+}
+
+.swiper-button-next {
+    right: -10px; /* Adjusted for better visibility */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px; /* Adjust arrow size */
+}
