@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Features.css";
@@ -66,16 +68,16 @@ const Features = () => {
   return (
     <main
       ref={containerRef}
-      className={`container bg-[#F7F7F7] flex flex-col items-center animate-fadeIn transition-opacity duration-700 justify-center gap-10 px-4 md:px-10 lg:px-20 mx-auto mt-8 lg:mt-16 lg:items-start ${
+      className={`container  py-6 lg:py-10 bg-[#F7F7F7] flex flex-col  items-center animate-fadeIn transition-opacity duration-700 justify-center gap-6 px-4 md:px-10 lg:px-20 mx-auto mt-8 lg:mt-16 lg:items-center ${
         containerInView ? "opacity-100" : "opacity-0"
       }`}
     >
       {/* Text Section */}
       <div className="space-y-4 flex flex-col justify-center items-center text-center">
-        <h1 className="text-lg font-semibold tracking-widest text-[#5B9B37] drop-shadow-sm md:text-xl lg:text-2xl font-funnel">
+        <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
           Our Features
         </h1>
-        <h2 className="text-2xl md:text-4xl xl:text-5xl tracking-widest w-full md:w-[90%] lg:w-[80%] xl:w-[70%] self-center flex font-funnel font-semibold text-black drop-shadow-md">
+        <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide w-full md:w-[60%] lg:w-[65%] self-center flex font-krona text-gray-800 drop-shadow-md">
           Explore the Cutting-Edge Features of Our Solution
         </h2>
       </div>
@@ -98,11 +100,11 @@ const Features = () => {
           {features.map((feature, index) => (
             <SwiperSlide key={index}>
               <div className="flex justify-center items-center p-4">
-                <div className="max-w-[370px] h-[410px] bg-white rounded-lg shadow-lg border border-gray-200 transform hover:shadow-[#5B9B37] hover:scale-95 hover:shadow-md transition-transform duration-700">
+                <div className="max-w-[370px] h-[380px] bg-white rounded-lg  border border-gray-200 transform  hover:scale-105 hover:shadow-md transition-transform duration-700">
                   <img
                     src={feature.image}
                     alt={feature.title}
-                    className="h-[200px] w-full rounded-t-lg object-cover transition-transform duration-700 transform"
+                    className="h-[180px] w-full rounded-t-lg object-cover transition-transform duration-700 transform"
                   />
                   <div className="p-4">
                     <h1 className="md:text-xl text-base font-semibold text-gray-800 transition-colors duration-300 hover:text-[#5B9B37]">
@@ -112,11 +114,16 @@ const Features = () => {
                     <p className="mt-3 text-sm text-justify text-gray-600 line-clamp-3">
                       {feature.description}
                     </p>
-                    <div className="flex justify-center items-center text-center">
-                      <button className="mt-4 px-6 py-2 bg-[#5B9B37] text-white duration-700 font-semibold rounded-full hover:bg-[#4a8c2c] transition transform hover:scale-110">
-                        Learn More
-                      </button>
-                    </div>
+                    <Link
+                      to="/register"
+                      className="font-semibold text-yellow-400 hover:text-yellow-500"
+                    >
+                      <div className="flex justify-center items-center text-center">
+                        <button className="mt-4 px-6 py-2 bg-[#5B9B37] text-white font-funnel font-semibold duration-700  rounded-full hover:bg-[#48892a] transition transform ">
+                          Register Now
+                        </button>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

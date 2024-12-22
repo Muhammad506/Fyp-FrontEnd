@@ -30,6 +30,7 @@ export default {
       fontFamily: {
         messiri: ["El Messiri", "sans-serif"],
         funnel: ["Funnel Display", "sans-serif"],
+        krona: ["Krona One", "sans-serif"],
       },
     },
   },

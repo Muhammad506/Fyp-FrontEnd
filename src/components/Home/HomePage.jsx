@@ -1,11 +1,13 @@
 import AboutUS from "./AboutUs";
 import Cta from "./Cta";
+import Faqs from "./Faqs";
 import Features from "./Features";
 import LandingPage from "./LandingPage";
-import ProjectComplexity from "./ProjectComplexity";
-import RegisterCTA from "./RegisterCTA";
-import SocietalImpact from "./SocietalImpact";
 import TechnologicalStack from "./TechnologicalStack";
+import OurTeam from "../AboutUs/OurTeam";
+// import ProjectComplexity from "./ProjectComplexity";
+// import RegisterCTA from "./RegisterCTA";
+// import SocietalImpact from "./SocietalImpact";
 
 const HomePage = () => {
   return (
@@ -14,10 +16,12 @@ const HomePage = () => {
       <AboutUS />
       <Cta />
       <TechnologicalStack />
-      <ProjectComplexity />
-      <SocietalImpact />
       <Features />
-      <RegisterCTA />
+      <Faqs />
+      <OurTeam />
+      {/* <ProjectComplexity /> */}
+      {/* <SocietalImpact /> */}
+      {/* <RegisterCTA /> */}
     </div>
   );
 };

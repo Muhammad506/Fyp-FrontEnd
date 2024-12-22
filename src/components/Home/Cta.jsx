@@ -1,7 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
-
 const Cta = () => {
   // Set up Intersection Observer hooks for the left and right content
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -15,9 +14,7 @@ const Cta = () => {
   });
 
   return (
-    <main className="container bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto mt-8 md:px-10 lg:px-20 lg:mt-16 lg:flex-row lg:items-start"
-    
-    >
+    <main className="container  py-6 lg:py-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
       {/* Left Content (Text & Button) */}
       <div
         ref={rightContentRef}
@@ -28,10 +25,10 @@ const Cta = () => {
         }`}
       >
         <div className="space-y-4">
-          <h1 className="text-lg font-semibold tracking-widest text-[#5B9B37] drop-shadow-sm md:text-xl lg:text-2xl font-funnel">
+          <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
             Take the Next Step
           </h1>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-gray-900 drop-shadow-md font-funnel">
+          <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl  2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[90%] xl:w-[80%] self-center flex font-krona text-black drop-shadow-md">
             Power that Doesn't Cost the Earth
           </h2>
         </div>
@@ -44,7 +41,7 @@ const Cta = () => {
         </p>
         <div>
           <Link to="/contact-us">
-            <button className="relative px-6 py-3 text-white font-semibold bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full shadow-lg hover:scale-95 duration-700  transition-transform ">
+            <button className="relative px-6 py-3 text-white font-funnel font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
               Let's Connect
               <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
             </button>
