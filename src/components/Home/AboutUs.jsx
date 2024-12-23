@@ -34,7 +34,7 @@ const AboutUS = () => {
       {/* Content Section */}
       <div
         ref={leftContentRef}
-        className={`lg:w-1/2 space-y-8 transition-all self-center duration-1000 ${
+        className={`lg:w-1/2 space-y-6 transition-all self-center duration-1000 ${
           leftContentInView
             ? "animate-slideInRight"
             : "opacity-0 translate-x-[50px]"
@@ -58,7 +58,7 @@ const AboutUS = () => {
         </p>
         <div>
           <Link to="/about-us">
-            <button className="relative px-6 py-3 text-white font-funnel font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
+            <button className="relative px-6 py-3 text-white tracking-widest text-sm font-funnel font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
               Learn More
               <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
             </button>

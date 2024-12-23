@@ -34,7 +34,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <main className="py-8 bg-[#F7F7F7]">
+    <main className="py-8 bg-[url('https://modinatheme.com/html/solarglow-html/assets/img/testimonial/map-shape.png')] bg-cover bg-center bg-[#F7F7F7]">
       <div className="text-center px-2 md:px-6 lg:px-24">
         {/* heading  */}
         <div className="gap-4 flex flex-col justify-center items-center text-center">

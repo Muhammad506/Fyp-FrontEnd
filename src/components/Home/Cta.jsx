@@ -41,7 +41,7 @@ const Cta = () => {
         </p>
         <div>
           <Link to="/contact-us">
-            <button className="relative px-6 py-3 text-white font-funnel font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
+            <button className="relative px-6 py-3 text-white font-funnel text-sm tracking-widest font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
               Let's Connect
               <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
             </button>

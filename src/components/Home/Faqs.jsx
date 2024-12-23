@@ -40,12 +40,14 @@ const FAQSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* FAQ Text Section */}
           <div className="space-y-4">
-            <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
-              Ask Something
-            </h1>
-            <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide w-full md:w-[80%] lg:w-[70%] xl:w-[65%] self-center flex font-krona text-gray-800 drop-shadow-md">
-              Do You Have Any Question Please?
-            </h2>
+            <div className="flex flex-col justify-center items-center text-center gap-4">
+              <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
+                Ask Something
+              </h1>
+              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide w-full md:w-[80%] lg:w-[70%] xl:w-[65%] self-center flex font-krona text-gray-800 drop-shadow-md">
+                Do You Have Any Question Please?
+              </h2>
+            </div>
 
             {/* FAQ Items */}
             <div className="space-y-4 mt-20 ">
@@ -101,7 +103,7 @@ const FAQSection = () => {
             <img
               src="Faq.svg"
               alt="Solar Worker"
-              className="w-full rounded-md h-auto  "
+              className="w-full rounded-lg  h-auto  "
             />
           </div>
         </div>
