@@ -1,6 +1,3 @@
-// import { MdCallMade } from "react-icons/md";
-import { Link } from "react-router-dom";
-
 const LandingPage = () => {
   return (
     <main className="relative text-white overflow-hidden ">
