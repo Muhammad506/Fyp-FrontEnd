@@ -14,7 +14,7 @@ const Cta = () => {
   });
 
   return (
-    <main className="container  py-6 lg:py-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
+    <main className="container   pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
       {/* Left Content (Text & Button) */}
       <div
         ref={rightContentRef}
@@ -33,11 +33,12 @@ const Cta = () => {
           </h2>
         </div>
         <p className="text-gray-700 text-justify text-base leading-relaxed sm:text-lg lg:text-xl lg:max-w-2xl">
-          If you have any questions or need expert advice about our services,
-          don’t hesitate to reach out. Give us a call at 07745593882 to speak
-          directly with our team and receive personalized assistance.
-          Alternatively, if you would prefer a callback at a convenient time,
-          simply hit the button below and we’ll be in touch shortly!
+          If you have questions or need expert advice, we’re here to help. Click
+          the button below to visit our Contact Us page and share your details.
+          Let us know your requirements, and our team will respond promptly to
+          assist you. Your journey to smarter solutions starts with a simple
+          click. We’re dedicated to providing the support you need to achieve
+          your goals!
         </p>
         <div>
           <Link to="/contact-us">

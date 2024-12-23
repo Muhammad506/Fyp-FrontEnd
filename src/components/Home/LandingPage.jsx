@@ -30,13 +30,6 @@ const LandingPage = () => {
           have. This holistic approach is designed to make your experience with
           us seamless, enjoyable, and productive.
         </p>
-        <div className="w-full sm:w-auto">
-          <Link to="/contact-us">
-            <button className="bg-yellow-500 px-5 py-3 text-black font-semibold rounded-full hover:scale-110 duration-700 transition-transform">
-              Get In Touch With Us
-            </button>
-          </Link>
-        </div>
       </div>
     </main>
   );

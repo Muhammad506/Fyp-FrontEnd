@@ -1,7 +1,6 @@
-/* Swiper navigation arrows position adjustment */
 .swiper-button-prev,
 .swiper-button-next {
-  color: black; /* Match the theme color */
+  color: black;
   transform: translateY(20%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
@@ -14,11 +13,11 @@
 }
 
 .swiper-button-prev {
-  left: 0px; /* Adjusted for better visibility */
+  left: 0px;
 }
 
 .swiper-button-next {
-  right: 0px; /* Adjusted for better visibility */
+  right: 0px;
 }
 
 .swiper-button-prev::after,
