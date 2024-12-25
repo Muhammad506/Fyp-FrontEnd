@@ -23,8 +23,8 @@ const TechnologicalStack = () => {
       {/* content */}
       <div className="flex  flex-col gap-8 md:gap-12 justify-center items-center text-center w-full z-10 py-6 ">
         <div className="px-2 md:px-4 gap-3 flex flex-col">
-        <h1 className="text-black text-sm uppercase font-bold font-funnel tracking-wider">
-        Technological Stack
+          <h1 className="text-black text-sm uppercase font-bold font-funnel tracking-wider">
+            Technological Stack
           </h1>
 
           <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl  2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[65%] xl:w-[60%] self-center flex font-krona text-white drop-shadow-md">

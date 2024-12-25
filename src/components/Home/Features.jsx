@@ -68,7 +68,7 @@ const Features = () => {
   return (
     <main
       ref={containerRef}
-      className={`container  py-6 lg:py-10 bg-[#F7F7F7] flex flex-col  items-center animate-fadeIn transition-opacity duration-700 justify-center gap-6 px-4 md:px-10 lg:px-20 mx-auto mt-8 lg:mt-16 lg:items-center ${
+      className={`container py-6 lg:py-10 bg-[#F7F7F7] flex flex-col  items-center animate-fadeIn transition-opacity duration-700 justify-center gap-6 px-4 md:px-10 lg:px-20 mx-auto mt-8 lg:mt-16 lg:items-center ${
         containerInView ? "opacity-100" : "opacity-0"
       }`}
     >

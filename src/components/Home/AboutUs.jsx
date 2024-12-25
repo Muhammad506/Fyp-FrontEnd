@@ -24,7 +24,7 @@ const AboutUS = () => {
         }`}
       >
         <img
-          className="w-full max-h-screen rounded-lg  md:w-3/4 lg:w-11/12 transform hover:shadow-[#5B9B37]/30 hover:shadow-lg "
+          className="w-full max-h-screen  md:w-3/4 lg:w-11/12  "
           src="about.jpg"
           alt="About Us"
           loading="lazy"
@@ -57,9 +57,9 @@ const AboutUS = () => {
           are revolutionizing how solar energy is managed.
         </p>
         <div>
-          <Link to="/about-us">
-            <button className="relative px-6 py-3 text-white tracking-widest text-sm font-funnel font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
-              Learn More
+          <Link to="/contact-us">
+            <button className="relative px-6 py-3 text-white font-funnel text-sm tracking-widest font-semibold  duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full   transition-transform  ">
+              Discover More
               <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
             </button>
           </Link>

@@ -14,9 +14,9 @@ const LandingPage = () => {
 
       {/* Content */}
       <div className="sm:space-y-4 py-24 sm:py-40  sm:px-16 px-4 md:px-10  lg:px-20 relative z-10 animate-slideInLeft flex flex-col items-start justify-center text-left space-y-6   max-w-screen-lg mx-auto">
-        <h className=" text-3xl md:text-4xl xl:text-5xl  text-nowrap font-bold leading-tight drop-shadow-lg">
+        <h1 className=" text-3xl md:text-4xl xl:text-5xl  text-nowrap font-bold leading-tight drop-shadow-lg">
           Solar Intelli Solutions
-        </h>
+        </h1>
         <p className="text-sm sm:text-lg max-w-lg lg:max-w-2xl drop-shadow-md text-justify">
           Our mission is to provide an outstanding customer experience through a
           combination of comprehensive documentation and guides, an active and
