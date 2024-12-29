@@ -39,36 +39,34 @@ const FAQSection = () => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* FAQ Text Section */}
-          <div className="space-y-4">
-            <div className="flex flex-col justify-center items-center text-center gap-4">
-              <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
+          <div className="space-y-4 ">
+            <div className="flex flex-col justify-center items-center text-center md:justify-start md:items-start gap-6  w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
+              <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider ml-0 lg:ml-3 xl:ml-4">
                 Ask Something
               </h1>
-              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide w-full md:w-[80%] lg:w-[70%] xl:w-[65%] self-center flex font-krona text-gray-800 drop-shadow-md">
+              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide flex font-krona text-gray-800 drop-shadow-md">
                 Do You Have Any Question Please?
               </h2>
             </div>
+
 
             {/* FAQ Items */}
             <div className="space-y-4 mt-20 ">
               {faqItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`border rounded-lg shadow-md transition-all duration-300 ${
-                    openIndex === index ? "bg-[#68ae3f]" : "bg-white"
-                  } hover:shadow-lg`}
+                  className={`border rounded-lg shadow-md transition-all duration-300 ${openIndex === index ? "bg-[#68ae3f]" : "bg-white"
+                    } hover:shadow-lg`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className={`w-full text-left px-6 py-4 font-semibold flex justify-between items-center focus:outline-none ${
-                      openIndex === index ? "text-white" : "text-gray-800"
-                    }`}
+                    className={`w-full text-left px-6 py-4 font-semibold flex justify-between items-center focus:outline-none ${openIndex === index ? "text-white" : "text-gray-800"
+                      }`}
                   >
                     {item.question}
                     <span
-                      className={`transition-transform duration-300 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
+                      className={`transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                        }`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -76,9 +74,8 @@ const FAQSection = () => {
                         viewBox="0 0 24 24"
                         strokeWidth="2"
                         stroke="currentColor"
-                        className={`w-6 h-6 ${
-                          openIndex === index ? "text-white" : "text-[#F9A749]"
-                        }`}
+                        className={`w-6 h-6 ${openIndex === index ? "text-white" : "text-[#F9A749]"
+                          }`}
                       >
                         <path
                           strokeLinecap="round"
@@ -99,7 +96,7 @@ const FAQSection = () => {
           </div>
 
           {/* Right-Side Image */}
-          <div className="relative">
+          <div className="relative lg:block hidden">
             <img
               src="Faq.svg"
               alt="Solar Worker"

@@ -99,15 +99,15 @@ const Features = () => {
         >
           {features.map((feature, index) => (
             <SwiperSlide key={index}>
-              <div className="flex justify-center items-center py-4 px-2 md:px-6 lg:px-8">
-                <div className="max-w-[370px]  lg:h-[360px] h-[380px] xl:h-[380px]  bg-white rounded-lg  border border-gray-200 transform  hover:scale-105 hover:shadow-md transition-transform duration-700">
+              <div className="flex justify-center items-center py-4 px-2 md:px-6 lg:px-8 xl:px-10">
+                <div className="max-w-[360px]  lg:h-[360px] h-[390px]  md:h-[400px] xl:h-[400px]  bg-white rounded-lg  border border-gray-200 transform  hover:scale-105 hover:shadow-md transition-transform duration-700">
                   <img
                     src={feature.image}
                     alt={feature.title}
                     className="xl:h-[180px] lg:h-[130px] h-[180px]  w-full rounded-t-lg object-cover transition-transform duration-700 transform"
                   />
                   <div className="p-4">
-                    <h1 className="md:text-xl text-base font-semibold text-gray-800 transition-colors duration-300 hover:text-[#5B9B37]">
+                    <h1 className="md:text-xl text-base font-semibold text-gray-800 text-nowrap transition-colors duration-300 hover:text-[#5B9B37]">
                       {feature.title}
                     </h1>
                     <hr className="my-2 border-gray-300" />

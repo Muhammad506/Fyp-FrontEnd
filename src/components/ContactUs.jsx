@@ -22,22 +22,36 @@ const ContactUs = () => {
   };
 
   return (
-    <main className="flex flex-col md:flex-row min-h-screen mt-20 animate-zoomIn">
-      {/* Left side: Form content */}
-      <div className="flex items-center justify-center w-full lg:w-1/2 p-8 bg-white text-gray-800">
-        <div className="w-full max-w-lg">
-          <h2 className="text-4xl font-bold my-6 text-left md:text-left">
-            Get In Touch With Us
+    <main>
+
+      {/* Top Section */}
+      <div className="relative bg-[url('/FeaturesPage.jpg')] bg-cover bg-center h-72 md:h-80 mt-16">
+        <div className="absolute inset-0 bg-[#0f1c47] opacity-80"></div>   {/* Gradient overlay with transparency at the center */}
+        <div className="relative h-full flex flex-col items-center justify-center space-y-6 px-2 md:px-6 py-16">
+          <h1 className="text-white text-lg md:text-xl lg:text-2xl font-semibold uppercase tracking-wider drop-shadow-lg font-funnel">
+            Contact Us
+          </h1>
+          <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold w-full md:w-[75%] xl:w-[55%] tracking-wider md:tracking-wider text-center drop-shadow-xl font-funnel">
+            Explore the Powerful Features of Our Platform
           </h2>
-          <p className="mb-6 text-left text-lg">
-            Contact us about anything related to our company or services. We`ll
-            do our best to get back to you as soon as possible.
+        </div>
+      </div>
+
+      {/* Contact Form Section */}
+      <div className="flex items-center justify-center min-h-screen py-12 bg-gray-50">
+        <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+            Get In Touch
+          </h2>
+          <p className="text-gray-600 text-center mb-8">
+            Fill out the form below and we’ll get back to you as soon as
+            possible.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-semibold mb-2"
+                className="block text-sm font-semibold text-gray-600 mb-1"
               >
                 Name
               </label>
@@ -47,15 +61,15 @@ const ContactUs = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-100 text-gray-800  rounded-lg lg:rounded-none  shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                placeholder="Your name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Enter your name"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold mb-2"
+                className="block text-sm font-semibold text-gray-600 mb-1"
               >
                 Email
               </label>
@@ -65,15 +79,15 @@ const ContactUs = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg lg:rounded-none   shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                placeholder="you@example.com"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Enter your email"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-semibold mb-2 "
+                className="block text-sm font-semibold text-gray-600 mb-1"
               >
                 Message
               </label>
@@ -82,40 +96,20 @@ const ContactUs = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 resize-none bg-gray-100 rounded-lg lg:rounded-none   text-gray-800  shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                rows="3"
-                placeholder="Your message here"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                rows="4"
+                placeholder="Write your message here"
                 required
               />
             </div>
             <button
               type="submit"
-              className="services w-full gap-2 relative flex justify-center items-center overflow-hidden rounded-full lg:rounded-sm  px-6 py-3 lg:px-4 lg:py-4 border-2 border-gray-900 bg-yellow-400  font-semibold z-10 snap-center text-black  group"
-            >
-              <span className="relative z-10">Send Message</span>
-              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
-              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 delay-75 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 delay-100 border-[#021430] transition-all duration-500 group-hover:w-full"></span>
-              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 delay-150 border-[#021430] transition-all duration-500 group-hover:h-full"></span>
-            </button>
-            {/* <button
-              type="submit"
-              className="w-full py-3 px-4 bg-gradient-to-br from-[#021430] via-[#172963] to-[#021430] text-white font-semibold rounded-lg shadow-lg focus:outline-none focus:ring-2 hover:scale-110 duration-700 ease-in-out transform focus:ring-yellow-400"
+              className="w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1 transition-all"
             >
               Send Message
-            </button> */}
+            </button>
           </form>
         </div>
-      </div>
-
-      {/* Right side: Image with overlay and gradient */}
-      <div className="relative w-full lg:h-full h-screen self-center lg:w-1/2 hidden lg:block  ">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50"></div>
-        <img
-          src="Contact-us.jpeg"
-          alt="Contact Us"
-          className="object-cover  w-full h-full transition-transform duration-700 ease-in-out hover:scale-105"
-        />
       </div>
     </main>
   );
