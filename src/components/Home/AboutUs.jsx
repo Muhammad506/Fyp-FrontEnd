@@ -13,7 +13,7 @@ const AboutUS = () => {
   });
 
   return (
-    <main className="container min-h-screen  pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
+    <main className="container min-h-screen font-poppins  pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
       {/* Image Section */}
       <div
         ref={rightContentRef}

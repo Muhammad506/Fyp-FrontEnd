@@ -12,7 +12,7 @@ const ContactUsHome = () => {
     };
 
     return (
-        <section className="bg-[#F7F7F7]  text-black font-poppins ">
+        <section className="bg-[#F7F7F7] min-h-screen text-black font-poppins ">
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 <motion.div
                     className="flex flex-col lg:flex-row items-center lg:items-start gap-12"

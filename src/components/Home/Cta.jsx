@@ -14,7 +14,7 @@ const Cta = () => {
   });
 
   return (
-    <main className="container  min-h-screen   bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
+    <main className="container  min-h-screen  font-poppins bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
       {/* Left Content (Text & Button) */}
       <div
         ref={rightContentRef}

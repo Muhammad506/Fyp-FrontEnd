@@ -34,7 +34,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="relative bg-[#F7F7F7] py-2">
+    <div className="relative bg-[#F7F7F7] py-2 font-poppins min-h-screen">
       <div className="container mx-auto px-2 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* FAQ Text Section */}

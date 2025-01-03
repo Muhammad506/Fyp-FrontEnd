@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const TechnologicalStack = () => {
   return (
-    <main className="relative  bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] h-full flex justify-center items-center py-16">
+    <main className="relative font-poppins bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] h-full flex justify-center items-center py-16">
       {/* left bottom shape */}
       <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tr-full rounded-br-full absolute left-0 bottom-2 z-10 shadow-xl"></div>
       <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute bottom-6 left-8 md:bottom-12 md:left-24 shadow-xl z-10"></div>

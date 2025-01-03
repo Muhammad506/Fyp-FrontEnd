@@ -67,7 +67,7 @@ const Features = () => {
 
   return (
 
-    <main className=" bg-[url('https://modinatheme.com/html/solarglow-html/assets/img/testimonial/map-shape.png')] bg-cover bg-center bg-[#F7F7F7]">
+    <main className="font-poppins min-h-screen bg-[url('https://modinatheme.com/html/solarglow-html/assets/img/testimonial/map-shape.png')] bg-cover bg-center bg-[#F7F7F7]">
       <div
         ref={containerRef}
         className={`containerflex flex-col py-2 items-center animate-fadeIn transition-opacity duration-700 justify-center gap-6 px-4 md:px-10 lg:px-20 mx-auto mt-8 lg:mt-16 lg:items-center ${containerInView ? "opacity-100" : "opacity-0"

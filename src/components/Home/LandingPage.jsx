@@ -46,7 +46,7 @@ const LandingPage = () => {
 
   return (
     <div
-      className="relative flex h-screen  items-center justify-center mt-16 md:mt-14 lg:mt-0 overflow-hidden bg-cover bg-center "
+      className="relative flex h-screen font-poppins  items-center justify-center mt-16 md:mt-14 lg:mt-0 overflow-hidden bg-cover bg-center "
       style={{ backgroundImage: `url(${currentBackground})` }}
     >
       {/* Overlay applied only to background */}
