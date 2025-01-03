@@ -17,14 +17,13 @@ const AboutUS = () => {
       {/* Image Section */}
       <div
         ref={rightContentRef}
-        className={`lg:w-1/2 flex justify-center items-center self-center  transition-transform duration-1000 ${
-          rightContentInView
+        className={`lg:w-1/2 flex justify-center items-center self-center  transition-transform duration-1000 ${rightContentInView
             ? "animate-slideInLeft"
             : "opacity-0 translate-x-[-50px]"
-        }`}
+          }`}
       >
         <img
-          className="w-full max-h-screen  md:w-3/4 lg:w-11/12  "
+          className="w-full max-h-screen rounded-xl  md:w-3/4 lg:w-11/12  "
           src="about.jpg"
           alt="About Us"
           loading="lazy"
@@ -34,11 +33,10 @@ const AboutUS = () => {
       {/* Content Section */}
       <div
         ref={leftContentRef}
-        className={`lg:w-1/2 space-y-6 transition-all self-center duration-1000 ${
-          leftContentInView
+        className={`lg:w-1/2 space-y-6 transition-all self-center duration-1000 ${leftContentInView
             ? "animate-slideInRight"
             : "opacity-0 translate-x-[50px]"
-        }`}
+          }`}
       >
         <div className="space-y-4">
           <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">

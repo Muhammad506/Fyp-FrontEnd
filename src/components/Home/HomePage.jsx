@@ -5,6 +5,7 @@ import Features from "./Features";
 import LandingPage from "./LandingPage";
 import TechnologicalStack from "./TechnologicalStack";
 import OurTeam from "../AboutUs/OurTeam";
+import ContactUsHome from "./ContactUsHome";
 // import ProjectComplexity from "./ProjectComplexity";
 // import RegisterCTA from "./RegisterCTA";
 // import SocietalImpact from "./SocietalImpact";
@@ -18,6 +19,7 @@ const HomePage = () => {
       <TechnologicalStack />
       <Features />
       <Faqs />
+      <ContactUsHome />
       <OurTeam />
       {/* <ProjectComplexity /> */}
       {/* <SocietalImpact /> */}

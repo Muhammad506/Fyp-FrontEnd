@@ -14,7 +14,7 @@ const Cta = () => {
   });
 
   return (
-    <main className="container    pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
+    <main className="container     bg-[#F7F7F7] flex flex-col items-center gap-10 px-4  mx-auto  md:px-10 lg:px-20  lg:flex-row lg:items-start">
       {/* Left Content (Text & Button) */}
       <div
         ref={rightContentRef}
@@ -28,7 +28,7 @@ const Cta = () => {
             Take the Next Step
           </h1>
           <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl  2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[90%] xl:w-[80%] self-center flex font-krona text-black drop-shadow-md">
-            Power that Doesn't Cost the Earth
+            Power that Doesn’t Cost the Earth
           </h2>
         </div>
         <p className="text-gray-700 text-justify text-base leading-relaxed sm:text-lg lg:text-xl lg:max-w-2xl">

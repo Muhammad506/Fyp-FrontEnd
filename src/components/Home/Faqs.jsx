@@ -34,13 +34,12 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="relative bg-[#F7F7F7] py-6 lg:py-10">
+    <div className="relative bg-[#F7F7F7] py-2">
       <div className="container mx-auto px-2 md:px-6 lg:px-8">
-        {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* FAQ Text Section */}
-          <div className="space-y-4 ">
-            <div className="flex flex-col justify-center items-center text-center md:justify-start md:items-start gap-6  w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
+          <div className="space-y-4">
+            <div className="flex flex-col justify-center items-center text-center md:justify-start md:items-start gap-6 w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
               <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider ml-0 lg:ml-3 xl:ml-4">
                 Ask Something
               </h1>
@@ -49,9 +48,8 @@ const FAQSection = () => {
               </h2>
             </div>
 
-
             {/* FAQ Items */}
-            <div className="space-y-4 mt-20 ">
+            <div className="space-y-4 mt-20">
               {faqItems.map((item, index) => (
                 <div
                   key={index}
@@ -85,23 +83,28 @@ const FAQSection = () => {
                       </svg>
                     </span>
                   </button>
-                  {openIndex === index && (
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ${openIndex === index ? "max-h-screen" : "max-h-0"
+                      }`}
+                  >
                     <div className="px-6 py-4 text-gray-700 text-justify bg-white">
                       {item.answer}
                     </div>
-                  )}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right-Side Image */}
-          <div className="relative lg:block hidden">
-            <img
-              src="Faq.svg"
-              alt="Solar Worker"
-              className="w-full rounded-lg  h-auto  "
-            />
+          <div className="lg:block hidden">
+            <div className="relative h-screen flex justify-center items-center">
+              <img
+                src="Faq.svg"
+                alt="Solar Worker"
+                className="w-full rounded-lg h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

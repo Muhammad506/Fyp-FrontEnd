@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ContactUs from "./components/ContactUs";
 import DashBoard from "./components/DashBoard";
+import "@fontsource/poppins";
 
 
 

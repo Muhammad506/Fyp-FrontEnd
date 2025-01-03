@@ -31,6 +31,7 @@ export default {
         messiri: ["El Messiri", "sans-serif"],
         funnel: ["Funnel Display", "sans-serif"],
         krona: ["Krona One", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

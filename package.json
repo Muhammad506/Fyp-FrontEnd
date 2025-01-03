@@ -12,10 +12,12 @@
   "dependencies": {
     "@fontsource/el-messiri": "^5.1.0",
     "@fontsource/krona-one": "^5.1.0",
+    "@fontsource/poppins": "^5.1.1",
     "@react-icons/all-files": "^4.1.0",
     "@react-three/fiber": "^8.17.10",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "framer-motion": "^11.15.0",
     "react": "^18.3.1",
     "react-avatar": "^5.0.3",
     "react-bootstrap": "^2.10.7",
