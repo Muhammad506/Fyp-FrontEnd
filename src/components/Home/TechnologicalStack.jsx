@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const TechnologicalStack = () => {
   return (
-    <main className="relative font-poppins bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] h-full flex justify-center items-center py-16">
+    <main className="relative font-poppins bg-gradient-to-br from-[#ffb800] via-[#ff9800] to-[#ffb800] h-full flex justify-center items-center py-16 ">
       {/* left bottom shape */}
       <div className="h-6 w-16 md:h-14 md:w-40 bg-[#1C204B] rounded-tr-full rounded-br-full absolute left-0 bottom-2 z-10 shadow-xl"></div>
       <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#97DB4E] absolute bottom-6 left-8 md:bottom-12 md:left-24 shadow-xl z-10"></div>
@@ -19,19 +19,16 @@ const TechnologicalStack = () => {
             Technological Stack
           </h1>
 
-          <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl  2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[65%] xl:w-[60%] self-center flex font-krona text-white drop-shadow-md">
+          <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[65%] xl:w-[60%] self-center flex font-krona text-white drop-shadow-md">
             Our solution uses advanced technologies for a scalable platform
           </h2>
+
         </div>
 
         <div className="relative w-full flex flex-col items-center">
           {/* Top Marquee */}
-          <Marquee
-            direction="right"
-            speed={20}
-            autoFill={true}
-            className="mb-4 overflow-hidden relative"
-          >
+          <Marquee direction="right" speed={30} autoFill={true} className="mb-3 overflow-hidden relative">
+
             <div className="flex">
               <img
                 src="https://solar-intelli-solutions.odoo.com/web/image/784-4b6ab123/WhatsApp_Image_2024-08-16_at_7.42.25_PM-removebg-preview.webp"
@@ -86,9 +83,9 @@ const TechnologicalStack = () => {
           {/* Bottom Marquee */}
           <Marquee
             direction="left"
-            speed={20}
+            speed={30}
             autoFill={true}
-            className="mt-4 overflow-hidden relative"
+            className="mt-3 overflow-hidden relative"
           >
             <div className="flex">
               <img

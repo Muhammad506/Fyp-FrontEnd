@@ -34,19 +34,20 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="relative bg-[#F7F7F7] py-2 font-poppins min-h-screen">
+    <div className="relative bg-[#F7F7F7] font-poppins py-6 lg:py-10 px-4 ">
       <div className="container mx-auto px-2 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* FAQ Text Section */}
           <div className="space-y-4">
-            <div className="flex flex-col justify-center items-center text-center md:justify-start md:items-start gap-6 w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
-              <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider ml-0 lg:ml-3 xl:ml-4">
+            <div className="flex flex-col justify-center items-start gap-6 w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
+              <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider ml-0">
                 Ask Something
               </h1>
-              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide flex font-krona text-gray-800 drop-shadow-md">
+              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-wide font-krona text-gray-800 drop-shadow-md ml-0">
                 Do You Have Any Question Please?
               </h2>
             </div>
+
 
             {/* FAQ Items */}
             <div className="space-y-4 mt-20">
@@ -72,8 +73,7 @@ const FAQSection = () => {
                         viewBox="0 0 24 24"
                         strokeWidth="2"
                         stroke="currentColor"
-                        className={`w-6 h-6 ${openIndex === index ? "text-white" : "text-[#F9A749]"
-                          }`}
+                        className={`w-6 h-6 ${openIndex === index ? "text-white" : "text-[#F9A749]"} `}
                       >
                         <path
                           strokeLinecap="round"
@@ -98,7 +98,7 @@ const FAQSection = () => {
 
           {/* Right-Side Image */}
           <div className="lg:block hidden">
-            <div className="relative h-screen flex justify-center items-center">
+            <div className="relative h-screen xl:h-full flex justify-center items-center">
               <img
                 src="Faq.svg"
                 alt="Solar Worker"

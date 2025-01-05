@@ -1,8 +1,8 @@
 .swiper-button-prev,
 .swiper-button-next {
-  color: black;
-  transform: translateY(20%);
-  background-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  transform: translateY(40%);
+  background-color: black;
   border-radius: 50%;
   width: 30px;
   height: 30px;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,13 @@ const ContactUs = () => {
     console.log("Form submitted:", formData);
   };
 
+  // Scroll to top when the page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
+
     <main>
 
       {/* Top Section */}
