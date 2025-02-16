@@ -30,10 +30,10 @@ const Features = () => {
       </div>
 
       {/* Main content section */}
-      <div className="container mx-auto px-4 justify-center text-left lg:px-16 mt-8 lg:py-16 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0">
+      <div className="container max-w-7xl mx-auto px-4 justify-between text-left lg:px-16 mt-8 lg:py-16 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0">
         <div
           ref={leftContentRef}
-          className={`lg:w-1/2 self-center flex flex-col space-y-6 lg:space-y-8 lg:pr-10 text-black ${
+          className={`lg:w-[55%] self-center flex flex-col space-y-6 lg:space-y-8 lg:pr-10 text-black ${
             leftContentInView ? "animate-slideInLeft" : "opacity-0"
           }`}
         >
@@ -56,7 +56,7 @@ const Features = () => {
         {/* Image Section */}
         <div
           ref={rightContentRef}
-          className={`lg:w-1/2 md:w-[80%] md:p-10 xl:p-20 p-2 ${
+          className={`lg:w-[40%] md:w-[80%] md:p-10 xl:p-20 p-2 ${
             rightContentInView ? "animate-slideInRight" : "opacity-0"
           }`}
         >

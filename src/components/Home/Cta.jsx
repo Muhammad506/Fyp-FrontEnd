@@ -18,11 +18,11 @@ const Cta = () => {
   });
 
   return (
-    <main className="container pt-6 lg:pt-10 font-poppins bg-[#F7F7F7] flex flex-col items-center gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
+    <main className="max-w-7xl container pt-6 lg:pt-10 font-poppins bg-[#F7F7F7] flex flex-col items-center justify-between gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
       {/* Left Content (Text & Button) */}
       <div
         ref={rightContentRef}
-        className={`lg:w-1/2 space-y-8 transition-all self-center duration-1000 ${rightContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[50px]"}`}
+        className={`lg:w-[55%] space-y-8 transition-all self-center duration-1000 ${rightContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[50px]"}`}
       >
         <div className="space-y-4">
           <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
@@ -41,7 +41,7 @@ const Cta = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={buttonInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] text-white px-8 py-3 rounded-full font-medium border-2  hover:border-[#5B9B37] shadow-lg transform transition-all duration-700 relative overflow-hidden group hover:bg-blue-900 hover:text-white hover:scale-105 hover:shadow-xl"
+              className="bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] text-white px-8 py-3 rounded-full font-medium border-2  hover:border-[#5B9B37] transform transition-all duration-700 relative overflow-hidden group hover:bg-blue-900 hover:text-white hover:scale-105"
             >
               <span className="absolute inset-0 bg-white rounded-full transform scale-0 group-hover:scale-100 transition-all duration-700"></span>
               <span className="relative group-hover:text-[#5B9B37] text-sm lg:text-base transition-all text-nowrap duration-700">
@@ -55,10 +55,10 @@ const Cta = () => {
       {/* Right Content (Image) */}
       <div
         ref={leftContentRef}
-        className={`lg:w-1/2 flex justify-center items-center self-center transition-transform duration-1000 ${leftContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[-50px]"}`}
+        className={`lg:w-[40%] flex justify-center items-center self-center transition-transform duration-1000 ${leftContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[-50px]"}`}
       >
         <img
-          className="w-full max-h-screen md:w-3/4 lg:w-11/12 transform transition-all duration-700"
+          className="max-h-screen  h-[450px] w-auto transform transition-all duration-700"
           src="CTA.jpg"
           alt="CTA"
           loading="lazy"

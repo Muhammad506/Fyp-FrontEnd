@@ -9,10 +9,10 @@ const Cards = () => {
   });
 
   return (
-    <div className="p-4 bg-gradient-to-tr from-blue-50 via-white to-blue-50 py-16">
+    <div className="p-4 flex flex-col items-center justify-center bg-gradient-to-tr from-blue-50 via-white to-blue-50 py-16">
       <div
         ref={cardsRef}
-        className={`grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-xl::grid-cols-4 transition-opacity duration-700 ${
+        className={`grid max-w-[90rem] sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition-opacity duration-700 ${
           cardsInView ? "opacity-100 animate-fadeIn" : "opacity-0"
         }`}
       >
@@ -51,54 +51,54 @@ const Cards = () => {
           content="  Take full control of your solar panels with easy-to-use on/off switches. Whether you need to shut down a panel for maintenance or optimize usage during specific times, you can do it all remotely."
         />
 
-        {/* card6 */}
+        {/* card6  */}
         <CardsData
-          image="https://solar-intelli-solutions.odoo.com/web/image/982-97e8b061/futuristic-ai-connection-holding-phone-robot-hand-ai-generated-futuristic-ai-connection-holding-phone-robot-hand-294173803.webp"
-          title="Real-Time Notifications"
-          content="Stay updated with real-time notifications about your system’s performance. From alerts to status updates, our platform ensures you’re always in the loop."
+          image="https://solar-intelli-solutions.odoo.com/web/image/997-bda6c337/eyJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjcwMCwiaGVpZ2h0Ijo0Njd9fSwiYnVja2V0IjoiZmluZWhvbWVidWlsZGluZy5zMy50YXVudG9uY2xvdWQuY29tIiwia2V5IjoiYXBwXC91cGxvYWRzXC8yMDIwXC8wOVwvMjMxMjM3NDlcL2luc3RhbGwtc29sYXItcG.webp"
+          title="Automated Maintenance"
+          content="Keep your system efficient with automated maintenance scheduling. The platform analyzes performance data to recommend optimal maintenance times, reducing downtime and extending your solar panels' lifespan."
         />
 
         {/* card7 */}
-        <CardsData
-          image="https://solar-intelli-solutions.odoo.com/web/image/990-0b63d13e/0823-DashboardDesign-Dan-Social.webp"
-          title="User-Friendly Dashboard "
-          content="Navigate through your data and controls effortlessly with our intuitive dashboard. Designed for both beginners and experts, the interface provides easy access to all critical information and features."
-        />
-
-        {/* card8 */}
-        <CardsData
-          image="https://solar-intelli-solutions.odoo.com/web/image/989-59c16ec0/1717904702113.webp"
-          title="Energy Efficiency Optimization "
-          content="Optimize your energy system’s efficiency by leveraging data-driven insights. Our platform helps you identify areas of improvement, ensuring you get the most out of your solar setup.  "
-        />
-
-        {/* card9 */}
         <CardsData
           image="https://solar-intelli-solutions.odoo.com/web/image/999-f0b89ab4/WhatsApp%20Image%202024-08-20%20at%2015.42.16_a9235a24.webp"
           title="Remote Access"
           content="Manage your solar energy system from anywhere at any time. Whether you’re at home or on the go, you can monitor and control your panels remotely for ultimate convenience. "
         />
 
+        {/* card8 */}
+        {/* <CardsData
+          image="https://solar-intelli-solutions.odoo.com/web/image/982-97e8b061/futuristic-ai-connection-holding-phone-robot-hand-ai-generated-futuristic-ai-connection-holding-phone-robot-hand-294173803.webp"
+          title="Real-Time Notifications"
+          content="Stay updated with real-time notifications about your system’s performance. From alerts to status updates, our platform ensures you’re always in the loop."
+        /> */}
+
+        {/* card9 */}
+        {/* <CardsData
+          image="https://solar-intelli-solutions.odoo.com/web/image/990-0b63d13e/0823-DashboardDesign-Dan-Social.webp"
+          title="User-Friendly Dashboard "
+          content="Navigate through your data and controls effortlessly with our intuitive dashboard. Designed for both beginners and experts, the interface provides easy access to all critical information and features."
+        /> */}
+
         {/* card10 */}
-        <CardsData
+        {/* <CardsData
+          image="https://solar-intelli-solutions.odoo.com/web/image/989-59c16ec0/1717904702113.webp"
+          title="Energy Efficiency Optimization "
+          content="Optimize your energy system’s efficiency by leveraging data-driven insights. Our platform helps you identify areas of improvement, ensuring you get the most out of your solar setup.  "
+        /> */}
+
+        {/* card11 */}
+        {/* <CardsData
           image="https://solar-intelli-solutions.odoo.com/web/image/993-0fc42463/69905-19123409.webp"
           title="Historical Data Analysis"
           content="Access and analyze historical data to better understand energy trends over time. Our detailed reports help you track performance, make predictions, and plan future improvements.  "
-        />
+        /> */}
 
-        {/* card11 */}
-        <CardsData
+        {/* card12 */}
+        {/* <CardsData
           image="https://solar-intelli-solutions.odoo.com/web/image/994-4afbef3e/477513793.webp"
           title="Customizable Alerts and Reports"
           content="Tailor the platform to your needs with customizable alerts and reports. Set thresholds for notifications and generate detailed performance reports that suit your specific requirements"
-        />
-
-        {/* card12  */}
-        <CardsData
-          image="https://solar-intelli-solutions.odoo.com/web/image/997-bda6c337/eyJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjcwMCwiaGVpZ2h0Ijo0Njd9fSwiYnVja2V0IjoiZmluZWhvbWVidWlsZGluZy5zMy50YXVudG9uY2xvdWQuY29tIiwia2V5IjoiYXBwXC91cGxvYWRzXC8yMDIwXC8wOVwvMjMxMjM3NDlcL2luc3RhbGwtc29sYXItcG.webp"
-          title="Automated Maintenance"
-          content="Keep your system efficient with automated maintenance scheduling. The platform analyzes performance data to recommend optimal maintenance times, reducing downtime and extending your solar panels' lifespan."
-        />
+        /> */}
       </div>
     </div>
   );

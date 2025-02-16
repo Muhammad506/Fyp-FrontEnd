@@ -33,7 +33,7 @@ const ContactUs = () => {
           <h1 className="text-[#EAB308]  text-sm lg:text-lg uppercase font-bold font-funnel tracking-wider">
             Contact Us
           </h1>
-          <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl  max-w-6xl  2xl:text-5xl tracking-wide w-full md:w-[60%] xl:w-[55%] text-center self-center flex font-krona text-white drop-shadow-md">
+          <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl max-w-2xl tracking-wide w-full md:w-[60%] xl:w-[55%] text-center self-center flex font-krona text-white drop-shadow-md">
             Let’s Connect and Build Something Amazing
           </h2>
         </div>

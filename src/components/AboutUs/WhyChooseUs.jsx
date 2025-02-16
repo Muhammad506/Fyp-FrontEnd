@@ -12,11 +12,11 @@ const WhyChooseUs = () => {
   });
 
   return (
-    <main className="container py-8 lg:py-12 mt-10 bg-[#F7F7F7] flex flex-col-reverse  items-center gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
+    <main className="container max-w-7xl py-8 lg:py-12 mt-10 bg-[#F7F7F7] flex flex-col-reverse justify-between items-center gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
       {/* Content Section */}
       <div
         ref={leftContentRef}
-        className={`lg:w-1/2 space-y-6 transition-all self-center duration-1000 ${leftContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[50px]"}`}
+        className={`lg:w-[55%] space-y-6 transition-all self-center duration-1000 ${leftContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[50px]"}`}
       >
         <div className="space-y-4">
           <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
       {/* Image Section */}
       <div
         ref={rightContentRef}
-        className={`lg:w-1/2 flex justify-center items-center self-center transition-transform duration-1000 ${rightContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[-50px]"}`}
+        className={`lg:w-[40%] flex justify-center items-center self-center transition-transform duration-1000 ${rightContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[-50px]"}`}
       >
         <img
           className="w-full max-h-screen rounded-lg md:w-[70%] lg:w-full"

@@ -35,25 +35,29 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] fixed top-0 left-0 w-full z-50">
+    <header className="font-poppins bg-gradient-to-r from-[#021430] via-[#0f1c47] to-[#021430] fixed top-0 left-0 w-full z-50">
       {/* Navbar for Large Screens */}
       <nav className="hidden lg:flex font-semibold justify-around items-center px-8 border-b border-gray-700 text-gray-300">
-        <Link to="/">
-          <img
-            src="NavBar.png"
-            alt="Navbar"
-            className="size-20 transform hover:scale-105 transition ease-in-out duration-500"
-          />
-        </Link>
+          <Link to="/">
+        <div className="flex items-center gap-2">
+            <img
+              src="Logo.png"
+              alt="Navbar"
+              className="size-16 transform hover:scale-105 transition ease-in-out duration-500"
+            />
+            <h2 className="mt-2 text-lg font-semibold text-center" style={{lineHeight:0.9}}>Solar Intelli <br/> <i className="text-sm not-italic font-medium text-yellow-400">Solutions</i></h2>
+        </div>
+          </Link>
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center">
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
-              className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${location.pathname === to
+              className={`relative group cursor-pointer transition-colors duration-300 hover:text-yellow-400 ${
+                location.pathname === to
                   ? "text-yellow-400 border-b-2 border-yellow-400"
                   : ""
-                }`}
+              }`}
             >
               {label}
             </Link>
@@ -105,22 +109,32 @@ const NavBar = () => {
       </nav>
 
       {/* Hamburger Menu for Small/Medium Screens */}
-      <div className="lg:hidden flex justify-between items-center px-5 border-b py-2">
-        <Link to="/">
-          <img src="NavBar.png" alt="Navbar" className="h-14 w-14" />
-        </Link>
+      <div className="lg:hidden flex justify-between items-center border-b border-gray-700 px-5 py-2">
+      <Link to="/">
+        <div className="flex items-center gap-2">
+            <img
+              src="Logo.png"
+              alt="Navbar"
+              className="size-14 transform hover:scale-105 transition ease-in-out duration-500"
+            />
+            <h2 className="mt-2 text-lg font-semibold text-center text-gray-300" style={{lineHeight:0.9}}>Solar Intelli <br/> <i className="text-sm not-italic font-medium text-yellow-400">Solutions</i></h2>
+        </div>
+          </Link>
         <button onClick={toggleMenu} className="z-50 focus:outline-none">
           <div
-            className={`w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
+            className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
           />
           <div
-            className={`w-6 h-0.5 bg-white my-1 transition-all duration-300 ${isOpen ? "opacity-0" : ""
-              }`}
+            className={`w-6 h-0.5 bg-white my-1 transition-all duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
           />
           <div
-            className={`w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
+            className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
           />
         </button>
       </div>

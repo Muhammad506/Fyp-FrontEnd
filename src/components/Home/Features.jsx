@@ -91,7 +91,7 @@ const Features = () => {
               spaceBetween={20}
               slidesPerView={1}
               navigation
-              autoplay={{ delay: 3000 }}
+              autoplay={{ delay: 1000 }}
               breakpoints={{
                 640: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },

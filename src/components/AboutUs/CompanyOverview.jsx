@@ -20,18 +20,18 @@ const CompanyOverview = () => {
           <h1 className="text-[#EAB308]  text-sm lg:text-lg uppercase font-bold font-funnel tracking-wider">
             About Us
           </h1>
-          <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-wide w-full md:w-[65%] lg:w-[60%] xl:w-[50%] text-center self-center flex font-krona text-white drop-shadow-md">
+          <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl max-w-2xl tracking-wide w-full md:w-[65%] lg:w-[60%] xl:w-[50%] text-center self-center flex font-krona text-white drop-shadow-md">
             Innovating Solar Solutions for a Sustainable Future
           </h2>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <main className="container pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col items-center gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
+      <main className="container max-w-7xl pt-6 lg:pt-10 bg-[#F7F7F7] flex flex-col justify-between items-center gap-10 px-4 mx-auto md:px-10 lg:px-20 lg:flex-row lg:items-start">
         {/* Image Section */}
         <div
           ref={rightContentRef}
-          className={`lg:w-1/2 flex justify-center items-center self-center transition-transform duration-1000 ${rightContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[-50px]"}`}
+          className={`lg:w-[40%] flex justify-center items-center self-center transition-transform duration-1000 ${rightContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[-50px]"}`}
         >
           <img
             className="w-full max-h-screen rounded-lg md:w-[70%] lg:w-full"
@@ -44,7 +44,7 @@ const CompanyOverview = () => {
         {/* Content Section */}
         <div
           ref={leftContentRef}
-          className={`lg:w-1/2 space-y-6 transition-all self-center duration-1000 ${leftContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[50px]"}`}
+          className={`lg:w-[55%] space-y-6 transition-all self-center duration-1000 ${leftContentInView ? "animate-slideInRight" : "opacity-0 translate-x-[50px]"}`}
         >
           <div className="space-y-4">
             <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">

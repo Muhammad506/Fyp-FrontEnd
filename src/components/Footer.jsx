@@ -30,13 +30,24 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="relative flex flex-col items-center">
             <Link to="/">
-              <img
-                className="size-24 mx-auto mb-4 transform transition-transform duration-1000 hover:scale-110"
-                src="NavBar.png"
-                alt="Navbar"
-              />
+              <div className="flex flex-col items-center gap-2 mb-3">
+                <img
+                  src="Logo.png"
+                  alt="Navbar"
+                  className="size-16 transform hover:scale-105 transition ease-in-out duration-500"
+                />
+                <h2
+                  className="text-lg font-semibold text-center"
+                  style={{ lineHeight: 0.9 }}
+                >
+                  Solar Intelli <br />{" "}
+                  <i className="text-sm not-italic font-medium text-yellow-400">
+                    Solutions
+                  </i>
+                </h2>
+              </div>
             </Link>
-            <p className="text-gray-400 text-sm max-w-xs">
+            <p className="text-gray-300 text-sm max-w-xs">
               Solar Intelli Solutions provides top-notch solar energy solutions,
               ensuring efficient and sustainable energy management for a greener
               future.
@@ -117,13 +128,10 @@ const Footer = () => {
         </div>
 
         {/* Contact & Social Media Section */}
-        <div className="space-y-4 text-center md:text-left">
+        <div className="space-y-4 text-center md:text-left flex flex-col items-center justify-center text-gray-300">
           <h2 className="text-lg font-semibold text-yellow-400">Contact Us</h2>
-          <p className="text-sm text-gray-500">
-            123 Solar Street, Energy City, Green State, 45678
-          </p>
-          <p className="text-sm text-gray-500">Email: info@solarintelli.com</p>
-          <p className="text-sm text-gray-500">Phone: +123 456 7890</p>
+          <p className="text-sm">Email: info@solarintelli.com</p>
+          <p className="text-sm">Phone: +123 456 7890</p>
           <div className="flex justify-center md:justify-start gap-6 pt-4">
             <a
               href="https://github.com"
@@ -154,7 +162,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="py-3 text-center text-sm text-gray-500 border-t border-gray-700">
+      <div className="py-3 text-center text-sm text-gray-300 border-t border-gray-700">
         © 2024 Solar Intelli Solutions. All rights reserved.
       </div>
     </footer>

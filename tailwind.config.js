@@ -33,6 +33,9 @@ export default {
         krona: ["Krona One", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      screens: {
+        xs: { max: "350px" },
+      },
     },
   },
   plugins: [],

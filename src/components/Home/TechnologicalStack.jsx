@@ -76,7 +76,7 @@ const TechnologicalStack = () => {
           {/* Overlay Image in the Center */}
           <div className="absolute inset-0 flex justify-center items-center z-10">
             <div className="border border-solid rounded-full bg-[#021430] border-white shadow-lg">
-              <img src="NavBar.png" className="w-28 h-28 p-4" alt="Overlay" />
+              <img src="NavBar.png" className="w-32 h-32 p-3" alt="Overlay" />
             </div>
           </div>
 

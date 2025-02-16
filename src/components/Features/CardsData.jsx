@@ -1,7 +1,7 @@
 function CardsData({ image, title, content }) {
   return (
-    <main className="flex justify-center items-center  p-4">
-      <div className="max-w-[370px] h-[420px] bg-white  rounded-lg shadow-lg border border-gray-200  transform hover:scale-110 hover:shadow-md   hover:shadow-yellow-400 transition-transform duration-700">
+    <main className="flex justify-center items-center max-w-7xl p-4">
+      <div className="max-w-[370px] xs:h-[510px] sm:h-[450px] bg-white  rounded-lg shadow-lg border border-gray-200  transform hover:scale-105 hover:shadow-md   hover:shadow-yellow-400 transition-transform duration-700">
         <img
           src={image}
           alt={title}
