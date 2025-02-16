@@ -34,11 +34,11 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="relative bg-[#F7F7F7] font-poppins py-6 lg:py-10 px-4 ">
+    <div className="flex items-center justify-center min-h-screen relative bg-[#F7F7F7] font-poppins py-6 lg:py-10 px-4 ">
       <div className="container mx-auto px-2 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+        <div className="flex flex-row items-center gap-8 h-full">
           {/* FAQ Text Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:w-1/2">
             <div className="flex flex-col justify-center items-start gap-6 w-full md:w-[80%] lg:w-[70%] xl:w-[65%]">
               <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider ml-0">
                 Ask Something
@@ -97,8 +97,8 @@ const FAQSection = () => {
           </div>
 
           {/* Right-Side Image */}
-          <div className="lg:block hidden">
-            <div className="relative h-screen xl:h-full flex justify-center items-center">
+          <div className="lg:block hidden py-10 lg:w-1/2">
+            <div className="relative h-full flex justify-center items-center">
               <img
                 src="Faq.svg"
                 alt="Solar Worker"

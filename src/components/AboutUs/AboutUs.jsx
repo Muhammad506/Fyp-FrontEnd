@@ -15,7 +15,6 @@ const AboutUs = () => {
     <div className="bg-[#F7F7F7] ">
       <CompanyOverview />
       <WhyChooseUs />
-      {/* <OurServices /> */}
       <Contact />
       <OurTeam />
     </div>

@@ -41,7 +41,7 @@ const OurTeam = () => {
           <h1 className="text-[#5B9B37] text-sm uppercase font-bold font-funnel tracking-wider">
             Meet Our Expert Team
           </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[60%] xl:w-[50%] self-center flex font-krona text-gray-800 drop-shadow-md">
+          <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[60%] lg:w-[50%] xl:w-[40%] self-center flex font-krona text-gray-800 drop-shadow-md">
             Professionals Shaping the Future of Solar Energy
           </h2>
         </div>

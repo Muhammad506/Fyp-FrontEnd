@@ -1,7 +1,11 @@
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const AboutUS = () => {
+  const [buttonRef, buttonInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -42,11 +46,19 @@ const AboutUS = () => {
           are revolutionizing how solar energy is managed.
         </p>
         <div>
-          <Link to="/contact-us">
-            <button className="relative px-6 py-3 text-white font-funnel text-sm tracking-widest font-semibold duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full transition-transform">
-              Discover More
-              <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
-            </button>
+          <Link to="/about-us">
+            <motion.button
+              ref={buttonRef}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={buttonInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] text-white px-8 py-3 rounded-full font-medium border-2  hover:border-[#5B9B37] shadow-lg transform transition-all duration-700 relative overflow-hidden group hover:bg-blue-900 hover:text-white hover:scale-105 hover:shadow-xl"
+            >
+              <span className="absolute inset-0 bg-white rounded-full transform scale-0 group-hover:scale-100 transition-all duration-700"></span>
+              <span className="relative group-hover:text-[#5B9B37] text-sm lg:text-base transition-all text-nowrap duration-700">
+                Discover More
+              </span>
+            </motion.button>
           </Link>
         </div>
       </div>

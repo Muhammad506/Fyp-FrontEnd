@@ -1,7 +1,11 @@
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const Cta = () => {
+  const [buttonRef, buttonInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   // Set up Intersection Observer hooks for the left and right content
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
     triggerOnce: true,
@@ -21,7 +25,8 @@ const Cta = () => {
         className={`lg:w-1/2 space-y-8 transition-all self-center duration-1000 ${rightContentInView ? "animate-slideInLeft" : "opacity-0 translate-x-[50px]"}`}
       >
         <div className="space-y-4">
-          <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">Take the Next Step</h1>
+          <h1 className="text-[#5B9B37] text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
+            Take the Next Step</h1>
           <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl tracking-tight md:tracking-wide w-full md:w-[70%] lg:w-[90%] xl:w-[80%] self-center flex font-krona text-black drop-shadow-md">
             Power that Doesn’t Cost the Earth
           </h2>
@@ -31,10 +36,18 @@ const Cta = () => {
         </p>
         <div>
           <Link to="/contact-us">
-            <button className="relative px-6 py-3 text-white font-funnel text-sm tracking-widest font-semibold duration-300 bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] hover:bg-[#4a8c2c] rounded-full transition-transform">
-              Let`s Connect
-              <span className="absolute inset-0 rounded-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-10"></span>
-            </button>
+            <motion.button
+              ref={buttonRef}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={buttonInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="bg-gradient-to-r from-[#5B9B37] to-[#4A8D2B] text-white px-8 py-3 rounded-full font-medium border-2  hover:border-[#5B9B37] shadow-lg transform transition-all duration-700 relative overflow-hidden group hover:bg-blue-900 hover:text-white hover:scale-105 hover:shadow-xl"
+            >
+              <span className="absolute inset-0 bg-white rounded-full transform scale-0 group-hover:scale-100 transition-all duration-700"></span>
+              <span className="relative group-hover:text-[#5B9B37] text-sm lg:text-base transition-all text-nowrap duration-700">
+                Let`s Connect
+              </span>
+            </motion.button>
           </Link>
         </div>
       </div>
